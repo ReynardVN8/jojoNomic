@@ -16,6 +16,9 @@
 		380F5FDA2412167300E29078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380F5FD82412167300E29078 /* LaunchScreen.storyboard */; };
 		380F5FE52412167300E29078 /* jojoNomicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F5FE42412167300E29078 /* jojoNomicTests.swift */; };
 		380F5FF02412167300E29078 /* jojoNomicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F5FEF2412167300E29078 /* jojoNomicUITests.swift */; };
+		380F60052412277500E29078 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F60042412277500E29078 /* Weather.swift */; };
+		380F6007241240D300E29078 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F6006241240D300E29078 /* UserLocation.swift */; };
+		380F6009241240F300E29078 /* FunctionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F6008241240F300E29078 /* FunctionPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		380F5FEB2412167300E29078 /* jojoNomicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jojoNomicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		380F5FEF2412167300E29078 /* jojoNomicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jojoNomicUITests.swift; sourceTree = "<group>"; };
 		380F5FF12412167300E29078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380F60042412277500E29078 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		380F6006241240D300E29078 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = SOURCE_ROOT; };
+		380F6008241240F300E29078 /* FunctionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,9 @@
 			children = (
 				380F5FCA2412166F00E29078 /* AppDelegate.swift */,
 				380F5FCC2412166F00E29078 /* SceneDelegate.swift */,
-				380F5FD12412166F00E29078 /* ContentView.swift */,
+				380F5FFF2412183400E29078 /* Model */,
+				380F60002412184700E29078 /* View */,
+				380F60012412185F00E29078 /* Presenter */,
 				380F5FD32412167300E29078 /* Assets.xcassets */,
 				380F5FD82412167300E29078 /* LaunchScreen.storyboard */,
 				380F5FDB2412167300E29078 /* Info.plist */,
@@ -137,6 +145,31 @@
 				380F5FF12412167300E29078 /* Info.plist */,
 			);
 			path = jojoNomicUITests;
+			sourceTree = "<group>";
+		};
+		380F5FFF2412183400E29078 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				380F6006241240D300E29078 /* UserLocation.swift */,
+				380F60042412277500E29078 /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		380F60002412184700E29078 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				380F5FD12412166F00E29078 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		380F60012412185F00E29078 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				380F6008241240F300E29078 /* FunctionPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +306,10 @@
 				380F5FD02412166F00E29078 /* jojoNomic.xcdatamodeld in Sources */,
 				380F5FCB2412166F00E29078 /* AppDelegate.swift in Sources */,
 				380F5FD22412166F00E29078 /* ContentView.swift in Sources */,
+				380F6009241240F300E29078 /* FunctionPresenter.swift in Sources */,
+				380F6007241240D300E29078 /* UserLocation.swift in Sources */,
 				380F5FCD2412166F00E29078 /* SceneDelegate.swift in Sources */,
+				380F60052412277500E29078 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
