@@ -20,10 +20,15 @@ struct CurrentWeather: View {
         return locationManager.lastLocation?.coordinate.longitude ?? 0
     }
     
+    let weather = WeatherGetter()
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(userLatitude), \(userLongitude)")
+            .onAppear{
+                let theWeather = self.weather.getWeather(lat: self.userLatitude, long: self.userLongitude)
+                print(theWeather)
+        }
     }
 }
 
