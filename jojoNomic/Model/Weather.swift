@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Combine
 
-class WeatherGetter {
+class WeatherGetter:ObservableObject {
     private let openWeatherMapBaseURL = "https://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "e63da0d1b1b37b45d94c56f8a92633cb"
     //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
@@ -27,7 +28,9 @@ class WeatherGetter {
         }
         else {
           // Case 2: Success
-          print("Data:\n\(data!)")
+          print("Raw data:\n\(data!)\n")
+          let dataString = String(data: data!, encoding: String.Encoding.utf8)
+          print("Human-readable data:\n\(dataString!)")
         }
       }
       dataTask.resume()
@@ -45,7 +48,9 @@ class WeatherGetter {
                 }
                 else {
                     // Case 2: Success
-                    print("Data:\n\(data!)")
+                    print("Raw data:\n\(data!)\n")
+                    let dataString = String(data: data!, encoding: String.Encoding.utf8)
+                    print("Human-readable data:\n\(dataString!)")
                 }
             }
         dataTask.resume()

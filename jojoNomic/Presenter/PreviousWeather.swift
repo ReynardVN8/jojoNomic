@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PreviousWeather.swift
 //  jojoNomic
 //
 //  Created by Reynard Vincent Nata on 06/03/20.
@@ -7,19 +7,16 @@
 //
 
 import SwiftUI
+import CoreData
 
-struct ContentView: View {
-    
+struct PreviousWeather: View {
     var body: some View {
-        VStack{
-            CurrentWeather()
-            PreviousWeather()
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PreviousWeather_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PreviousWeather()
     }
 }

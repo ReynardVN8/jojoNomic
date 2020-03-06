@@ -1,5 +1,5 @@
 //
-//  FunctionPresenter.swift
+//  CurrentWeather.swift
 //  jojoNomic
 //
 //  Created by Reynard Vincent Nata on 06/03/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FunctionPresenter: View {
+struct CurrentWeather: View {
     
     @ObservedObject var locationManager = LocationManager()
 
@@ -19,15 +19,16 @@ struct FunctionPresenter: View {
     var userLongitude: Double {
         return locationManager.lastLocation?.coordinate.longitude ?? 0
     }
-
+    
+    
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct FunctionPresenter_Previews: PreviewProvider {
+struct CurrentWeather_Previews: PreviewProvider {
     static var previews: some View {
-        FunctionPresenter()
+        CurrentWeather()
     }
 }
