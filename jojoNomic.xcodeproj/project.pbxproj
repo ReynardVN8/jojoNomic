@@ -17,9 +17,9 @@
 		380F5FE52412167300E29078 /* jojoNomicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F5FE42412167300E29078 /* jojoNomicTests.swift */; };
 		380F5FF02412167300E29078 /* jojoNomicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F5FEF2412167300E29078 /* jojoNomicUITests.swift */; };
 		380F60052412277500E29078 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F60042412277500E29078 /* Weather.swift */; };
-		380F6007241240D300E29078 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F6006241240D300E29078 /* UserLocation.swift */; };
 		380F600B241249DA00E29078 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F600A241249DA00E29078 /* CurrentWeather.swift */; };
 		380F600D24124A0800E29078 /* PreviousWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F600C24124A0800E29078 /* PreviousWeather.swift */; };
+		380F604E24127B1700E29078 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F604D24127B1700E29078 /* UserLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +56,9 @@
 		380F5FEF2412167300E29078 /* jojoNomicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jojoNomicUITests.swift; sourceTree = "<group>"; };
 		380F5FF12412167300E29078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		380F60042412277500E29078 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		380F6006241240D300E29078 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = SOURCE_ROOT; };
 		380F600A241249DA00E29078 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		380F600C24124A0800E29078 /* PreviousWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousWeather.swift; sourceTree = "<group>"; };
+		380F604D24127B1700E29078 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 		380F5FFF2412183400E29078 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				380F6006241240D300E29078 /* UserLocation.swift */,
+				380F604D24127B1700E29078 /* UserLocation.swift */,
 				380F60042412277500E29078 /* Weather.swift */,
 			);
 			path = Model;
@@ -310,8 +310,8 @@
 				380F5FCB2412166F00E29078 /* AppDelegate.swift in Sources */,
 				380F5FD22412166F00E29078 /* ContentView.swift in Sources */,
 				380F600B241249DA00E29078 /* CurrentWeather.swift in Sources */,
-				380F6007241240D300E29078 /* UserLocation.swift in Sources */,
 				380F600D24124A0800E29078 /* PreviousWeather.swift in Sources */,
+				380F604E24127B1700E29078 /* UserLocation.swift in Sources */,
 				380F5FCD2412166F00E29078 /* SceneDelegate.swift in Sources */,
 				380F60052412277500E29078 /* Weather.swift in Sources */,
 			);
