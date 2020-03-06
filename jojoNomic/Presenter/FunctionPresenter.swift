@@ -9,6 +9,18 @@
 import SwiftUI
 
 struct FunctionPresenter: View {
+    
+    @ObservedObject var locationManager = LocationManager()
+
+    var userLatitude: Double {
+        return locationManager.lastLocation?.coordinate.latitude ?? 0
+    }
+
+    var userLongitude: Double {
+        return locationManager.lastLocation?.coordinate.longitude ?? 0
+    }
+
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }

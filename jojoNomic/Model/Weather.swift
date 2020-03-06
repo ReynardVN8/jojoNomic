@@ -12,9 +12,10 @@ class WeatherGetter {
     private let openWeatherMapBaseURL = "https://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "e63da0d1b1b37b45d94c56f8a92633cb"
     //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
+    
+    let session = URLSession.shared
+    
     func getWeather(lat: Double, long: Double) {
-      // This is a pretty simple networking task, so the shared session will do.
-        let session = URLSession.shared
         let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?lat=\(lat)&lon=\(long)&appid=\(openWeatherMapAPIKey)")!
       
       // The data task retrieves the data.
@@ -22,17 +23,31 @@ class WeatherGetter {
         (data: Data?, response: URLResponse?, error: Error?) in
         if let error = error {
           // Case 1: Error
-          // We got some kind of error while trying to get data from the server.
           print("Error:\n\(error)")
         }
         else {
           // Case 2: Success
-          // We got a response from the server!
           print("Data:\n\(data!)")
         }
       }
-      
-      // The data task is set up...launch it!
       dataTask.resume()
+    }
+    
+    func searchWeatherLocation(city: String){
+        let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?appid=\(openWeatherMapAPIKey)&q=\(city)")!
+        
+        // The data task retrieves the data.
+        let dataTask = session.dataTask(with: weatherRequestURL) {
+            (data: Data?, response: URLResponse?, error: Error?) in
+                if let error = error {
+                    // Case 1: Error
+                    print("Error:\n\(error)")
+                }
+                else {
+                    // Case 2: Success
+                    print("Data:\n\(data!)")
+                }
+            }
+        dataTask.resume()
     }
 }

@@ -10,20 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var locationManager = LocationManager()
-
-    var userLatitude: Double {
-        return locationManager.lastLocation?.coordinate.latitude ?? 0
-    }
-
-    var userLongitude: Double {
-        return locationManager.lastLocation?.coordinate.longitude ?? 0
-    }
-
-    
     var body: some View {
         VStack{
             Text("Hello, World!")
+            FunctionPresenter()
         }
     }
 }
