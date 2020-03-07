@@ -17,32 +17,7 @@ class WeatherGetter:ObservableObject {
     func getWeather(lat: Double, long: Double) -> String {
         var todayWeather = "Today's Weather"
         if let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?lat=\(lat)&lon=\(long)&appid=\(openWeatherMapAPIKey)"){
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: weatherRequestURL){
-                (data: Data?, response: URLResponse?, error: Error?) in
-                if let error = error {
-                  // Case 1: Error
-                  print("Error:\n\(error)")
-                }
-                else {
-                  // Case 2: Success
-                    
-                    if let urlContent = data{
-                        do{
-                            let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: Any]
-                            
-                            if let weatherData = (jsonResult["weather"] as? Array<[String: Any]>){
-                                todayWeather = weatherData[0]["description"] as! String
-                            }
-                        } catch {
-                            print("JSON Processing failed")
-                        }
-                    } else {
-                        print("Error during JSON parsing")
-                    }
-                }
-            }
-          dataTask.resume()
+            todayWeather = getData(weather: weatherRequestURL)
         }
         return todayWeather
     }
@@ -50,33 +25,38 @@ class WeatherGetter:ObservableObject {
     func searchedCity(city: String) -> String {
         var cityWeather = "City's Weather"
         if let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?q=\(city)&appid=\(openWeatherMapAPIKey)"){
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: weatherRequestURL){
-                (data: Data?, response: URLResponse?, error: Error?) in
-                if let error = error {
-                  // Case 1: Error
-                  print("Error:\n\(error)")
-                }
-                else {
-                  // Case 2: Success
-                    
-                    if let urlContent = data{
-                        do{
-                            let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: Any]
-                            
-                            if let weatherData = (jsonResult["weather"] as? [[String: Any]]){
-                                cityWeather = weatherData[0]["description"]! as! String
-                            }
-                        } catch {
-                            print("JSON Processing failed")
-                        }
-                    } else {
-                        print("Error during JSON parsing")
-                    }
-                }
-            }
-          dataTask.resume()
+           cityWeather = getData(weather: weatherRequestURL)
         }
         return cityWeather
+    }
+    
+    func getData(weather: URL) -> String{
+        var weatherDescription = "Weather Description"
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: weather){
+            (data: Data?, response: URLResponse?, error: Error?) in
+            if let error = error {
+                // Case 1: Error
+                print("Error:\n\(error)")
+            }
+            else {
+                // Case 2: Success
+                if let urlContent = data{
+                    do{
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: Any]
+                            
+                        if let weatherData = (jsonResult["weather"] as? Array<[String: Any]>){
+                            weatherDescription = weatherData[0]["description"] as! String
+                        }
+                    } catch {
+                        print("JSON Processing failed")
+                    }
+                } else {
+                    print("Error during JSON parsing")
+                }
+            }
+        }
+        dataTask.resume()
+        return weatherDescription
     }
 }

@@ -22,8 +22,8 @@ struct CurrentWeather: View {
     }
     
     var weather: String {
-//        return WeatherGetter().getWeather(lat: userLatitude, long: userLongitude)
-        return WeatherGetter().searchedCity(city: "Jakarta")
+        return WeatherGetter().getWeather(lat: userLatitude, long: userLongitude)
+//        return WeatherGetter().searchedCity(city: "Jakarta")
     }
     
     
