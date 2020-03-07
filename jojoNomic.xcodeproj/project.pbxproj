@@ -107,9 +107,9 @@
 			children = (
 				380F5FCA2412166F00E29078 /* AppDelegate.swift */,
 				380F5FCC2412166F00E29078 /* SceneDelegate.swift */,
-				380F5FFF2412183400E29078 /* Model */,
-				380F60002412184700E29078 /* View */,
-				380F60012412185F00E29078 /* Presenter */,
+				380F604D24127B1700E29078 /* UserLocation.swift */,
+				380F60042412277500E29078 /* Weather.swift */,
+				380F5FD12412166F00E29078 /* ContentView.swift */,
 				380F5FD32412167300E29078 /* Assets.xcassets */,
 				380F5FD82412167300E29078 /* LaunchScreen.storyboard */,
 				380F5FDB2412167300E29078 /* Info.plist */,
@@ -143,30 +143,6 @@
 				380F5FF12412167300E29078 /* Info.plist */,
 			);
 			path = jojoNomicUITests;
-			sourceTree = "<group>";
-		};
-		380F5FFF2412183400E29078 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				380F604D24127B1700E29078 /* UserLocation.swift */,
-				380F60042412277500E29078 /* Weather.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		380F60002412184700E29078 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				380F5FD12412166F00E29078 /* ContentView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		380F60012412185F00E29078 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
