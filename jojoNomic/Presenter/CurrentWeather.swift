@@ -32,6 +32,7 @@ struct CurrentWeather: View {
                 .foregroundColor(Color(red: 0.6, green: 1, blue: 0.95, opacity: 1))
                 .edgesIgnoringSafeArea(.all)
                 VStack{
+                    Text("Your Location coordinate: latitude, longitude").padding()
                     Text("\(userLatitude), \(userLongitude)").padding()
                     Text(weather).padding()
             }.padding()
