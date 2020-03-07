@@ -4,8 +4,6 @@
 <dict>
 	<key>NSAppTransportSecurity</key>
 	<dict/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>To Determined Your Weather Location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To Determined Your Weather Location</string>
 	<key>CFBundleDevelopmentRegion</key>

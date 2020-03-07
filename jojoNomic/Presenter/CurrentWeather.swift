@@ -29,14 +29,13 @@ struct CurrentWeather: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1))
+                .foregroundColor(Color(red: 0.6, green: 1, blue: 0.95, opacity: 1))
                 .edgesIgnoringSafeArea(.all)
-            VStack{
-                Text("\(userLatitude), \(userLongitude)")
-                Text(weather)
-            }
+                VStack{
+                    Text("\(userLatitude), \(userLongitude)").padding()
+                    Text(weather).padding()
+            }.padding()
         }
-        
     }
 }
 
