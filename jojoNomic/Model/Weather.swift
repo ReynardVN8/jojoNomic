@@ -48,8 +48,8 @@ class WeatherGetter:ObservableObject {
     }
     
     func searchedCity(city: String) -> String {
-        var cityWeather = ""
-        if let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?appid=\(openWeatherMapAPIKey)&q=\(city)"){
+        var cityWeather = "City's Weather"
+        if let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?q=\(city)&appid=\(openWeatherMapAPIKey)"){
             let session = URLSession.shared
             let dataTask = session.dataTask(with: weatherRequestURL){
                 (data: Data?, response: URLResponse?, error: Error?) in
