@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct CurrentWeather: View {
     
@@ -28,17 +27,15 @@ struct CurrentWeather: View {
     
     
     var body: some View {
-        HStack {
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1))
+                .edgesIgnoringSafeArea(.all)
             VStack{
                 Text("\(userLatitude), \(userLongitude)")
                 Text(weather)
             }
-            Button(action: {
-                
-            }) {
-                Text("Save")
-            }
-        }.padding()
+        }
         
     }
 }
