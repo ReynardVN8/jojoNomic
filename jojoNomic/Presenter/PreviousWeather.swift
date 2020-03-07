@@ -10,9 +10,28 @@ import SwiftUI
 import CoreData
 
 struct PreviousWeather: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Button(action: {
+                
+            }) {
+                Text("Refresh")
+            }
+            List(0 ..< 5) { item in
+                HStack {
+                    VStack {
+                        Text("City")
+                        Text("Date")
+                    }
+                    Spacer()
+                    Text("Weather")
+                }
+            }
+        }.padding()
     }
+
 }
 
 struct PreviousWeather_Previews: PreviewProvider {

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct CurrentWeather: View {
     
@@ -26,10 +27,18 @@ struct CurrentWeather: View {
     
     
     var body: some View {
-        VStack{
-            Text("\(userLatitude), \(userLongitude)")
-            Text(weather)
-        }
+        HStack {
+            VStack{
+                Text("\(userLatitude), \(userLongitude)")
+                Text(weather)
+            }
+            Button(action: {
+                
+            }) {
+                Text("Save")
+            }
+        }.padding()
+        
     }
 }
 

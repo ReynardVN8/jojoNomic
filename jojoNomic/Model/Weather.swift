@@ -15,7 +15,7 @@ class WeatherGetter:ObservableObject {
     //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
     
     func getWeather(lat: Double, long: Double) -> String {
-        var todayWeather = ""
+        var todayWeather = "Today's Weather"
         if let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?lat=\(lat)&lon=\(long)&appid=\(openWeatherMapAPIKey)"){
             let session = URLSession.shared
             let dataTask = session.dataTask(with: weatherRequestURL){
